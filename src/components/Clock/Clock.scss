@@ -1,0 +1,34 @@
+.Clock {
+  background-color: #00000070;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  p {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+  .time {
+    display: flex;
+    font-size: 5em;
+    * {
+      text-align: center;
+    }
+    :first-child {
+      flex: 2;
+      text-align: right;
+    }
+    :last-child {
+      flex: 2;
+      text-align: left;
+    }
+    .ticker {
+      flex: 1;
+      min-width: .5em;
+      line-height: 1.2em;
+    }
+  }
+  .date {
+    font-size: 2em;
+  }
+}
