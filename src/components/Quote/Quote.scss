@@ -15,7 +15,10 @@
   }
 
   .show {
-    animation: linear slide-up 1s;
+    animation: linear slide-up .3s forwards;
+  }
+  .hide {
+    animation: linear slide-down .3s forwards;
   }
 
   @keyframes slide-up {
@@ -24,6 +27,14 @@
     }
     to {
       opacity: 1;
+    }
+  }
+  @keyframes slide-down {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
     }
   }
 

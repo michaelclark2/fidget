@@ -4,20 +4,24 @@ import './Quote.scss';
 const showAuthor = (e) => {
   if (e.target.id === 'quote'
   && ![...e.srcElement.children].includes(e.fromElement)) {
-    console.log('hovered');
+    const {author} = e.target.children;
+    author.classList.remove('hide');
+    author.classList.add('show');
+
   }
 }
 
 const hideAuthor = (e) => {
   if (e.target.id === 'quote'
   && ![...e.srcElement.children].includes(e.toElement)) {
-    console.log('left');
+    const {author} = e.target.children;
+    author.classList.remove('show');
+    author.classList.add('hide');
   }
 }
 
 export default () => {
   const [quote, setQuote] = useState('');
-  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (!quote) {
@@ -39,7 +43,7 @@ export default () => {
   return (
     <div className="Quote" id="quote">
       <p className="quote">"{quote.quote}"</p>
-      <p className="author">{quote.author}</p>
+      <p className="author" id="author">{quote.author}</p>
     </div>
   )
 };
