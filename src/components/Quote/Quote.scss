@@ -1,0 +1,30 @@
+.Quote {
+  background-color: #00000070;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 18px;
+  padding: 1em;
+  .quote {
+
+  }
+  .author {
+    font-size: .75em;
+    opacity: 0;
+  }
+
+  .show {
+    animation: linear slide-up 1s;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+}
