@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import moment from 'moment';
 import './Clock.scss';
 import Time from './Time';
+import DateClock from './Date';
 
 export default () => {
   const [time, setTime] = useState(Date.now());
@@ -16,7 +16,7 @@ export default () => {
   return (
     <div className="Clock">
       <Time time={time} tick={tick} />
-      <p className="date">{moment(time).format('MMMM Do')}</p>
+      <DateClock date={time} />
     </div>
   )
 }
