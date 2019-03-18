@@ -1,14 +1,22 @@
 import React from 'react';
 
+const formatHour = (time) => {
+  const hour = new Date(time).getHours();
+  return hour > 12 ? hour - 12 : hour || 12;
+};
+
+const formatMinute = (time) => {
+  const minute = new Date(time).getMinutes();
+  return minute < 10 ? '0' + minute: minute;
+}
+
 export default (props) => {
   const {tick, time} = props;
-  const hour = new Date(time).getHours();
-  const minute = new Date(time).getMinutes();
   return (
     <div className="time">
-      <p>{ hour > 12 ? hour - 12 : hour }</p>
+      <p>{formatHour(time)}</p>
       <div className="ticker">{ tick ? ':' : ' ' }</div>
-      <p>{minute.toString().length < 2 ? '0' + minute : minute}</p>
+      <p>{formatMinute(time)}</p>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+
 const months = [
   'January',
   'February',
@@ -18,7 +19,6 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 
 const getDate = (date) => {
   const dayOfMonth = new Date(date).getDate().toString();
-
   const lastChar = dayOfMonth[dayOfMonth.length - 1];
 
   switch (lastChar) {

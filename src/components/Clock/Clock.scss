@@ -1,8 +1,10 @@
 .Clock {
+  font-family: 'Bai Jamjuree';
   background-color: #00000070;
   display: flex;
   flex-flow: column;
   align-items: center;
+  align-content: space-around;
   p {
   }
   .time {
@@ -11,9 +13,8 @@
     color: #fff;
     display: flex;
     font-size: 5em;
-    * {
-      text-align: center;
-    }
+    text-align: center;
+
     :first-child {
       flex: 2;
       text-align: right;
