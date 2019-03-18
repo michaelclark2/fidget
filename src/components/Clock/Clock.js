@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <div className="Clock">
-      <Time hour={moment(time).format('h')} minute={moment(time).format('mm')} tick={tick} />
+      <Time time={time} tick={tick} />
       <p className="date">{moment(time).format('MMMM Do')}</p>
     </div>
   )

@@ -1,7 +1,9 @@
 import React from 'react';
 
 export default (props) => {
-  const {tick, hour, minute} = props;
+  const {tick, time} = props;
+  const hour = new Date(time).getHours();
+  const minute = new Date(time).getMinutes();
   return (
     <div className="time">
       <p>{hour}</p>
