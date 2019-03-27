@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Weather.scss';
 import { getWeather, getIcon } from './weather-helpers';
+import WeatherIcon from './WeatherIcon';
 import Forecast from './Forecast';
 
-const Icon = (props) => {
-  switch(props.code) {
-    case 'few':
-      return <span>ayelmao</span>
-    default:
-      return null;
-  }
-}
 
 export default () => {
   const [weather, setWeather] = useState('');
@@ -37,7 +30,7 @@ export default () => {
       <div className="today">
         <div className="temp">
           <h2>{today.temperature}°</h2>
-          <Icon code={getIcon(today.icon)} />
+          <WeatherIcon code={getIcon(today.icon)} className="icon" />
         </div>
         <h2 className="city">{weather.city}, {weather.state}</h2>
       </div>
