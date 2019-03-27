@@ -1,0 +1,18 @@
+.Weather {
+  width: 200px;
+  background-color: #eee;
+  .today {
+    display: flex;
+    flex-flow: column;
+  }
+  .city {
+    font-size: 1em;
+    color: rgb(133, 133, 133);
+    text-align: center;
+  }
+  .temp {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
