@@ -16,6 +16,7 @@ export const getWeather = async (coords) => {
   }
 };
 
-export const getIcon = (iconUrl) => {
-
+export const getIcon = (iconUrl = '') => {
+  // iconUrl = "https://api.weather.gov/icons/land/night/skc?size=medium" <= I need skc
+  return iconUrl.split('?').shift().split('/').pop();
 }
